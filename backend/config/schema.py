@@ -10,9 +10,7 @@ The schema follows the GraphQL schema design pattern where queries are read-only
 operations and mutations are write operations.
 """
 import graphene
-
-# Placeholder schema - will be populated incrementally as we build each app
-# This follows the schema stitching pattern for modular GraphQL architecture
+from users.schema import Mutation as UserMutation
 
 
 class Query(graphene.ObjectType):
@@ -20,17 +18,20 @@ class Query(graphene.ObjectType):
     Root Query type for the GraphQL API.
     
     All read operations (queries) are aggregated here from various apps.
-    Currently empty - will be extended as schemas are added.
+    Currently empty - will be extended as schemas are added from other apps.
     """
     pass
 
 
-class Mutation(graphene.ObjectType):
+class Mutation(
+    UserMutation,
+    graphene.ObjectType
+):
     """
     Root Mutation type for the GraphQL API.
     
     All write operations (mutations) are aggregated here from various apps.
-    Currently empty - will be extended as schemas are added.
+    Currently includes authentication mutations from users app.
     """
     pass
 

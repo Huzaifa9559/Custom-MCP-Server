@@ -12,17 +12,19 @@ operations and mutations are write operations.
 import graphene
 from users.schema import Mutation as UserMutation
 from organizations.schema import Query as OrganizationQuery, Mutation as OrganizationMutation
+from documents.schema import Query as DocumentQuery, Mutation as DocumentMutation
 
 
 class Query(
     OrganizationQuery,
+    DocumentQuery,
     graphene.ObjectType
 ):
     """
     Root Query type for the GraphQL API.
     
     All read operations (queries) are aggregated here from various apps.
-    Currently includes organization queries.
+    Includes organization and document queries.
     """
     pass
 
@@ -30,13 +32,14 @@ class Query(
 class Mutation(
     UserMutation,
     OrganizationMutation,
+    DocumentMutation,
     graphene.ObjectType
 ):
     """
     Root Mutation type for the GraphQL API.
     
     All write operations (mutations) are aggregated here from various apps.
-    Currently includes authentication mutations and organization mutations.
+    Includes authentication, organization, and document mutations.
     """
     pass
 

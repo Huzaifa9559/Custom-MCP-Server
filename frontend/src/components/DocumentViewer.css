@@ -1,0 +1,154 @@
+.document-viewer {
+  width: 100%;
+}
+
+.card {
+  background: white;
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.viewer-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.close-btn {
+  padding: 0.5rem 1rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #5a6268;
+}
+
+.document-content {
+  margin-bottom: 2rem;
+}
+
+.document-content h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.content-text {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.ai-questions-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.ai-questions-section h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.ai-questions-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ai-questions-section textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.ai-questions-section button {
+  padding: 0.75rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.ai-questions-section button:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.ai-questions-section button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.conversations-section {
+  margin-top: 2rem;
+}
+
+.conversations-section h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.conversations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.conversation-item {
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border-left: 3px solid #667eea;
+}
+
+.question {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.answer {
+  margin-bottom: 0.5rem;
+  color: #555;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.conversation-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 1rem;
+}
+

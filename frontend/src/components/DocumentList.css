@@ -1,0 +1,133 @@
+.document-list {
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.card-header button {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.card-header button:hover {
+  background: #5568d3;
+}
+
+.create-form {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.create-form input,
+.create-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.create-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.create-form button {
+  padding: 0.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-form button:hover:not(:disabled) {
+  background: #218838;
+}
+
+.create-form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.document-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.document-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.document-item:hover {
+  background: #f9f9f9;
+  border-color: #667eea;
+}
+
+.document-item.selected {
+  background: #e7f0ff;
+  border-color: #667eea;
+}
+
+.document-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.document-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.document-preview {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.5rem 0 0 0;
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+.loading, .error {
+  padding: 1rem;
+  text-align: center;
+}
+
+.error {
+  color: #dc3545;
+}
+
